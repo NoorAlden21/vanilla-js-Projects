@@ -35,7 +35,7 @@ async function weather(city = "damascus") {
       data.wind.speed + getWindSymbol();
     document.querySelector(
       ".weather-icon"
-    ).src = `images/${data.weather[0].main}.png`;
+    ).src = `images/${data.weather[0].main.toLowerCase()}.png`;
   } catch {
     error.style.display = "block";
     weatherUi.style.display = "none";
